@@ -35,17 +35,20 @@ body {
 .add-task-wrapper {
   display: flex;
 }
-#incomplete-tasks, #completed-tasks {
+#incomplete-tasks, 
+#completed-tasks {
   margin: 0;
   padding: 0px;
 }
 
 /* Сброс стилей правило 3.4 не распространяется*/
-li, h3 {
+li, 
+h3 {
   list-style: none;
 }
 /* Сброс стилей правило 3.4 не распространяется*/
-input,button{
+input,
+button {
   outline: none;
 }
 .button {
