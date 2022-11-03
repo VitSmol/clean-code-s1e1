@@ -9,7 +9,7 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput=document.getElementById("new-task");//Add a new task.
-var addButton=document.getElementsByTagName("button")[0];//first button
+var addButton=document.querySelector(".add__task-button");//first button
 var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incompleteTasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
@@ -32,35 +32,24 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
+    listItem.classList.add(`tasks-list__item`)
     label.innerText=taskString;
-    // label.className='task';
-    // label.classList.add(`task-label`) //!
     label.classList.add(`tasks-list__label`)
-
-    listItem.classList.add(`tasks-list__item`) //!
-    // listItem.classList.add(`tasks-list__item`) 
 
     //Each elements, needs appending
     checkBox.type="checkbox";
-    // checkBox.classList.add(`checkbox-item`) //!
-    checkBox.classList.add(`tasks-list__checkbox`)
     editInput.type="text";
-    // editInput.className="task";
-    // editInput.classList.add("task-input"); //!
-    editInput.classList.add("tasks-list__input");
+    editInput.classList.add(`tasks-list__input`)
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    // editButton.className="edit-task"; //!
-    editButton.classList.add("button");
-    editButton.classList.add("tasks-list__edit-btn");
-    
-    // deleteButton.className="delete-task"; //!
-    // deleteButton.classList.add("button");
-    deleteButton.classList.add("tasks-list__delete-btn");
+
+    editButton.className="tasks-list__edit-btn";
+
+    deleteButton.className="tasks-list__delete-btn";
+
     deleteButtonImg.src='./remove.svg';
     deleteButtonImg.alt=`remove-btn-image`
 
-    // deleteButtonImg.classList.add(`tasks-list__tasks-list__delete-img`) //!
     deleteButtonImg.classList.add(`tasks-list__delete-img`)
     deleteButton.appendChild(deleteButtonImg);
 
