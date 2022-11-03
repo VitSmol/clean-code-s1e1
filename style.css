@@ -32,7 +32,7 @@ body {
 .tasks-list__label {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 .add__task-wrapper {
   display: flex;
@@ -94,7 +94,7 @@ button {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
-  width: 226px
+  width: 226px;
 }
 .tasks-list__input:focus, 
 .add__task:focus {
@@ -150,12 +150,12 @@ button {
 
 /* Edit Task */
 .tasks-list__item .tasks-list__input {
-  display: none
+  display: none;
 }
 
 .tasks-list__item.edit-mode .tasks-list__input {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 .tasks-list__item.edit-mode .tasks-list__label {
